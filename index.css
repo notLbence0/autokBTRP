@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+
+}
+
+
+img {
+    width: 100%;
+    border: 2px solid gray;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+                        "h  h"
+                        "n  n"
+                        "ar as"
+                        "f  f";
+    max-width: 1000px;
+    margin: auto ;
+}
+
+header {
+    grid-area: h;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: left;
+    gap: 10px;
+}
+nav {
+    grid-area: n;
+    background-color: rgb(48, 87, 48);
+}
+
+article {
+    grid-area: ar;
+    border: 2px solid gray;
+    margin: 5px;
+}
+
+.tarolo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+aside {
+    grid-area: as;
+}
+
+footer {
+    grid-area: f;
+    text-align: center  ;
+}
+
+p {
+    color: black;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.szoveg {
+    color: black;
+}
+
+h1 {
+    color: rgb(56, 110, 92);
+    font-size: 40px;
+}
+
+h2 {
+    padding: 0px;
+    color: rgb(68, 112, 68);
+    background-color: rgb(211, 209, 209);
+    border: 1px solid gray;
+}
+
+.erdekessegek {
+    color: black;
+    margin: 10px;
+}
+
+
+@media screen and (max-width:800px) {
+    main{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-areas:"h"
+                        "n"
+                        "ar"
+                        "as"
+                        "f";
+}
+    .tarolo{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    ul{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
